@@ -16,7 +16,7 @@
   --verde:#4A9B6F; --rojo:#C05050;
 }
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-snap-type:y mandatory}
+html{scroll-behavior:smooth}body{overflow-y:scroll;height:100vh;scroll-snap-type:y mandatory}
 body{font-family:'DM Sans',sans-serif;background:var(--negro);color:var(--bl);overflow-x:hidden;cursor:none}
 
 #cur{width:8px;height:8px;background:var(--oro);border-radius:50%;position:fixed;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:transform .12s}
@@ -625,7 +625,7 @@ document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;cur.
 (function a(){rx+=(mx-rx)*.1;ry+=(my-ry)*.1;ring.style.left=rx+'px';ring.style.top=ry+'px';requestAnimationFrame(a);})();
 
 var pg=document.getElementById('prog');
-window.addEventListener('scroll',function(){
+document.body.addEventListener('scroll',function(){
   var h=document.documentElement;
   pg.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';
   ud();
