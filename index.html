@@ -742,13 +742,8 @@ function scalePresentation() {
   var scaleW = winW / baseWidth;
   var scaleH = winH / baseHeight;
   var scale = Math.min(scaleW, scaleH);
-  // Only scale down, never up — let large screens have natural spacing
-  if(scale < 1) {
-    document.body.style.zoom = scale;
-    document.body.style.webkitTextSizeAdjust = 'none';
-  } else {
-    document.body.style.zoom = '';
-  }
+  document.body.style.zoom = scale;
+  document.body.style.webkitTextSizeAdjust = 'none';
 }
 scalePresentation();
 window.addEventListener('resize', scalePresentation);
