@@ -32,12 +32,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--negro);color:var(--bl);ov
 .grain{position:fixed;inset:0;z-index:997;pointer-events:none;opacity:.015;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:128px}
 
 section{min-height:100vh;min-height:100dvh;scroll-snap-align:start;position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:center}
-.inner{position:relative;z-index:2;padding:clamp(3rem,5vw,5rem) clamp(3rem,6vw,8rem);width:100%}
+.inner{position:relative;z-index:2;padding:clamp(3rem,5vw,5rem) clamp(3rem,6vw,8rem);width:100%;max-width:1600px;margin-left:auto;margin-right:auto}
 
 .lbl{font-size:.72rem;letter-spacing:4px;text-transform:uppercase;color:var(--oro);margin-bottom:1.2rem;font-family:'DM Mono',monospace;display:block}
-.title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,5vw,5rem);font-weight:600;line-height:1.0;color:var(--bl);letter-spacing:-.5px}
+.title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.4rem,3.5vw,4.5rem);font-weight:600;line-height:1.0;color:var(--bl);letter-spacing:-.5px}
 .title em{font-style:italic;color:var(--oro-v);font-weight:300}
-.sub{font-size:1.05rem;font-weight:300;color:var(--t2);line-height:1.85;max-width:52ch;margin-top:1.2rem}
+.sub{font-size:clamp(1rem,1.1vw,1.15rem);font-weight:300;color:var(--t2);line-height:1.85;max-width:52ch;margin-top:1.2rem}
 .body{font-size:1rem;font-weight:300;color:var(--t2);line-height:1.85}
 .mono{font-family:'DM Mono',monospace;font-size:.78rem;color:var(--oro);letter-spacing:1px}
 .gline{width:48px;height:1.5px;background:var(--oro);margin-bottom:1.6rem}
@@ -52,7 +52,7 @@ section{min-height:100vh;min-height:100dvh;scroll-snap-align:start;position:rela
 .s1-img{overflow:hidden;position:relative}
 .s1-img img{width:100%;height:100%;object-fit:cover;object-position:center top;filter:grayscale(15%) brightness(.68) contrast(1.08);transform:scale(1.08);transition:transform 12s ease}
 .s1-img::after{content:'';position:absolute;inset:0;background:linear-gradient(270deg,var(--negro) 0%,transparent 55%)}
-.s1-right{display:flex;flex-direction:column;justify-content:flex-end;padding:4rem 5vw 5rem 4vw;background:var(--negro);position:relative}
+.s1-right{display:flex;flex-direction:column;justify-content:flex-end;padding:4rem 5vw 5rem 4vw;background:var(--negro);position:relative;max-width:800px;width:100%}
 .s1-right::before{content:'';position:absolute;top:0;left:0;width:1px;height:100%;background:linear-gradient(180deg,transparent,rgba(201,164,107,.25),transparent)}
 .s1-logo{margin-bottom:2rem}
 .s1-eyebrow{font-family:'DM Mono',monospace;font-size:.7rem;letter-spacing:3px;text-transform:uppercase;color:var(--oro);margin-bottom:1rem}
@@ -65,7 +65,7 @@ section{min-height:100vh;min-height:100dvh;scroll-snap-align:start;position:rela
 
 /* S2 */
 #s2{background:var(--negro-s)}
-.s2-layout{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center;padding:5rem 6vw}
+.s2-layout{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center;padding:5rem 6vw;max-width:1600px;margin:0 auto;width:100%}
 .s2-big{font-family:'Cormorant Garamond',serif;font-size:clamp(7rem,14vw,12rem);font-weight:600;color:var(--rojo);line-height:.85;letter-spacing:-4px}
 .s2-sub{font-size:.88rem;color:var(--t3);margin-top:.8rem;line-height:1.6;max-width:28ch}
 .s2-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(201,164,107,.1);margin-top:1.8rem}
@@ -612,7 +612,7 @@ comercial de <span class="pv">View Management</span>.
 </section>
 
 <section id="s12">
-<div class="inner" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center">
+<div class="inner" style="display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:100vh;text-align:center;max-width:1200px;margin:0 auto">
 <div style="margin-bottom:2.4rem;opacity:.65" class="rev"><svg width="65" height="auto" viewBox="0 0 589 402" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M556.532 92.9348C536.598 92.9348 524.064 105.494 524.064 125.468V269.515C524.064 275.097 520.364 278.805 514.793 278.805C509.223 278.805 505.522 275.097 505.522 269.515V130.133C505.522 107.367 491.158 92.9348 468.399 92.9348C445.679 92.9348 431.275 107.328 431.275 130.133V269.555C431.275 275.137 427.575 278.844 422.005 278.844C416.434 278.844 412.734 275.137 412.734 269.555V125.468C412.734 105.494 400.2 92.9348 380.266 92.9348C360.331 92.9348 347.798 105.494 347.798 125.468V232.357C347.798 249.541 358.461 260.226 375.61 260.226C381.181 260.226 384.881 263.933 384.881 269.515V364.802C384.881 387.567 399.245 402 422.005 402C444.724 402 459.128 387.607 459.128 364.802V269.515C459.128 263.933 462.828 260.226 468.399 260.226C473.969 260.226 477.67 263.933 477.67 269.515V364.802C477.67 387.567 492.034 402 514.793 402C537.513 402 551.917 387.607 551.917 364.802V269.515C551.917 263.933 555.617 260.226 561.187 260.226C578.336 260.226 589 249.541 589 232.357V125.468C589 105.494 576.506 92.9348 556.532 92.9348ZM287.557 223.068C287.557 228.649 283.856 232.357 278.286 232.357C272.715 232.357 269.015 228.649 269.015 223.068V176.58C269.015 170.999 272.715 167.291 278.286 167.291C283.856 167.291 287.557 170.999 287.557 176.58V223.068ZM278.286 260.265H310.754C325.118 260.265 333.951 251.414 333.951 237.022V146.399C333.951 112.471 312.147 90.6224 278.286 90.6224C244.425 90.6224 222.621 112.471 222.621 146.399V346.223C222.621 380.152 244.425 402 278.286 402C312.147 402 333.951 380.152 333.951 346.223V302.088C333.951 287.695 325.158 278.844 310.754 278.844C296.39 278.844 287.557 287.695 287.557 302.088V316.042C287.557 321.624 283.856 325.332 278.286 325.332C272.715 325.332 269.015 321.624 269.015 316.042V269.555C268.975 263.973 272.715 260.265 278.286 260.265ZM185.497 92.9348C171.133 92.9348 162.3 101.786 162.3 116.179V376.444C162.3 390.837 171.094 399.688 185.497 399.688C199.861 399.688 208.695 390.877 208.695 376.444V116.179C208.695 101.786 199.901 92.9348 185.497 92.9348ZM185.497 0C171.133 0 162.3 8.81107 162.3 23.2437V51.1122C162.3 65.5049 171.094 74.3558 185.497 74.3558C199.861 74.3558 208.695 65.5049 208.695 51.1122V23.2437C208.695 8.81107 199.901 0 185.497 0ZM115.946 92.9348C96.0114 92.9348 83.4778 105.494 83.4778 125.468V269.515C83.4778 275.097 79.7774 278.805 74.2069 278.805C68.6364 278.805 64.936 275.097 64.936 269.515V125.468C64.936 105.494 52.4024 92.9348 32.468 92.9348C12.5336 92.9348 0 105.494 0 125.468V232.357C0 249.541 10.6635 260.226 27.8127 260.226C33.3832 260.226 37.0836 263.933 37.0836 269.515V364.802C37.0836 387.567 51.4475 402 74.2069 402C96.9664 402 111.33 387.607 111.33 364.802V269.515C111.33 263.933 115.031 260.226 120.601 260.226C137.75 260.226 148.414 249.541 148.414 232.357V125.468C148.414 105.494 135.88 92.9348 115.946 92.9348Z" fill="#C9A46B"/></svg></div>
 <div class="cquote rev d1">&ldquo;No se trata de usar IA. Se trata de que el booker tome <em>mejores decisiones</em> m&aacute;s r&aacute;pido.&rdquo;</div>
 <div class="cdata rev d2">
@@ -731,6 +731,27 @@ var saObs = new IntersectionObserver(function(entries) {
 }, {threshold: 0.2});
 
 document.querySelectorAll('section').forEach(function(s){ saObs.observe(s); });
+
+
+// RESPONSIVE SCALE — keeps proportions on any screen
+function scalePresentation() {
+  var baseWidth = 1440;
+  var baseHeight = 900;
+  var winW = window.innerWidth;
+  var winH = window.innerHeight;
+  var scaleW = winW / baseWidth;
+  var scaleH = winH / baseHeight;
+  var scale = Math.min(scaleW, scaleH);
+  // Only scale down, never up — let large screens have natural spacing
+  if(scale < 1) {
+    document.body.style.zoom = scale;
+    document.body.style.webkitTextSizeAdjust = 'none';
+  } else {
+    document.body.style.zoom = '';
+  }
+}
+scalePresentation();
+window.addEventListener('resize', scalePresentation);
 
 </script>
 </body>
